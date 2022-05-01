@@ -166,49 +166,49 @@ class TreeEuclidean:
         b.print_board()
         if x == 0:
             if y == 0:
-                # if currentNode.last_move != 1:
+                if currentNode.last_move != 1:
                     b.moveBlankDown()
                     b1 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankUp()
                     n1 = EuclideanNode(b1, currentNode.g+1, currentNode, 2)
                     self.add(n1)
                     currentNode.children.append(n1)
-                # if currentNode.last_move != 4:
+                if currentNode.last_move != 4:
                     b.moveBlankRight()
                     b2 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     n2 = EuclideanNode(b2, currentNode.g+1, currentNode, 3)
                     self.add(n2)
                     currentNode.children.append(n2)
             elif y == 2:
-                # if currentNode.last_move != 1:
+                if currentNode.last_move != 1:
                     b.moveBlankDown()
                     b1 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankUp()
                     n1 = EuclideanNode(b1, (currentNode.g)+1, currentNode, 2)
                     self.add(n1)
                     currentNode.children.append(n1)
-                # if currentNode.last_move != 3:
+                if currentNode.last_move != 3:
                     b.moveBlankLeft()
                     b2 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     n2 = EuclideanNode(b2, currentNode.g+1, currentNode, 4)
                     self.add(n2)
                     currentNode.children.append(n2)
             else:
-                # if currentNode.last_move != 1:
+                if currentNode.last_move != 1:
                     b.moveBlankDown()
                     b1 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankUp()
                     n1 = EuclideanNode(b1, currentNode.g+1, currentNode, 2)
                     self.add(n1)
                     currentNode.children.append(n1)
-                # if currentNode.last_move != 4:
+                if currentNode.last_move != 4:
                     b.moveBlankRight()
                     b2 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankLeft()
                     n2 = EuclideanNode(b2, currentNode.g+1, currentNode, 4)
                     self.add(n2)
                     currentNode.children.append(n2)
-                # if currentNode.last_move != 3:
+                if currentNode.last_move != 3:
                     b.moveBlankLeft()
                     b3 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     n3 = EuclideanNode(b3, currentNode.g+1, currentNode, 3)
@@ -216,14 +216,14 @@ class TreeEuclidean:
                     currentNode.children.append(n3)
         elif x == 2:
             if y == 0:
-                # if currentNode.last_move != 4:
+                if currentNode.last_move != 4:
                     b.moveBlankRight()
                     b2 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankLeft()
                     n2 = EuclideanNode(b2, currentNode.g+1, currentNode, 3)
                     self.add(n2)
                     currentNode.children.append(n2)
-                # if currentNode.last_move != 2:
+                if currentNode.last_move != 2:
                     b.moveBlankUp()
                     b1 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankDown()
@@ -232,35 +232,35 @@ class TreeEuclidean:
                     currentNode.children.append(n1)
                 
             elif y == 2:
-                # if currentNode.last_move != 2:
+                if currentNode.last_move != 2:
                     b.moveBlankUp()
                     b1 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankDown()
                     n1 = EuclideanNode(b1, currentNode.g+1, currentNode, 1)
                     self.add(n1)
                     currentNode.children.append(n1)
-                # if currentNode.last_move != 3:
+                if currentNode.last_move != 3:
                     b.moveBlankLeft()
                     b2 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     n2 = EuclideanNode(b2, currentNode.g+1, currentNode, 4)
                     self.add(n2)
                     currentNode.children.append(n2)
             else:
-                # if currentNode.last_move != 4:
+                if currentNode.last_move != 4:
                     b.moveBlankRight()
                     b3 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankLeft()
                     n3 = EuclideanNode(b3, currentNode.g+1, currentNode, 3)
                     self.add(n3)
                     currentNode.children.append(n3)
-                # if currentNode.last_move != 2:
+                if currentNode.last_move != 2:
                     b.moveBlankUp()
                     b1 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankDown()
                     n1 = EuclideanNode(b1, currentNode.g+1, currentNode, 1)
                     self.add(n1)
                     currentNode.children.append(n1)
-                # if currentNode.last_move != 3:
+                if currentNode.last_move != 3:
                     b.moveBlankLeft()
                     b2 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankRight()
@@ -271,21 +271,21 @@ class TreeEuclidean:
                 
         else:
             if y == 0:
-                # if currentNode.last_move != 4:
+                if currentNode.last_move != 4:
                     b.moveBlankRight()
                     b2 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankLeft()
                     n2 = EuclideanNode(b2, currentNode.g+1, currentNode, 3)
                     self.add(n2)
                     currentNode.children.append(n2)
-                # if currentNode.last_move != 1:
+                if currentNode.last_move != 1:
                     b.moveBlankDown()
                     b3 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankUp()
                     n3 = EuclideanNode(b3, currentNode.g+1, currentNode, 2)
                     self.add(n3)
                     currentNode.children.append(n3)
-                # if currentNode.last_move != 2: 
+                if currentNode.last_move != 2: 
                     b.moveBlankUp()
                     b1 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankDown()
@@ -293,14 +293,14 @@ class TreeEuclidean:
                     self.add(n1)
                     currentNode.children.append(n1)
             elif y == 2:
-                # if currentNode.last_move != 1:
+                if currentNode.last_move != 1:
                     b.moveBlankDown()
                     b3 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankUp()
                     n3 = EuclideanNode(b3, currentNode.g+1, currentNode, 2)
                     self.add(n3)
                     currentNode.children.append(n3)
-                # if currentNode.last_move != 2:
+                if currentNode.last_move != 2:
                     b.moveBlankUp()
                     b1 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankDown()
@@ -308,7 +308,7 @@ class TreeEuclidean:
                     self.add(n1)
                     currentNode.children.append(n1)
                     
-                # if currentNode.last_move != 3:
+                if currentNode.last_move != 3:
                     b.moveBlankLeft()
                     b2 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankRight()
@@ -317,21 +317,21 @@ class TreeEuclidean:
                     currentNode.children.append(n2)
                     
             else:
-                # if currentNode.last_move != 4:
+                if currentNode.last_move != 4:
                     b.moveBlankRight()
                     b3 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankLeft()
                     n3 = EuclideanNode(b3, currentNode.g+1, currentNode, 3)
                     self.add(n3)
                     currentNode.children.append(n3)
-                # if currentNode.last_move != 1:
+                if currentNode.last_move != 1:
                     b.moveBlankDown()
                     b4 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankUp()
                     n4 = EuclideanNode(b4, currentNode.g+1, currentNode, 2)
                     self.add(n4)
                     currentNode.children.append(n4)
-                # if currentNode.last_move != 2:
+                if currentNode.last_move != 2:
                     b.moveBlankUp()
                     b1 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankDown()
@@ -339,7 +339,7 @@ class TreeEuclidean:
                     self.add(n1)
                     currentNode.children.append(n1)
                     
-                # if currentNode.last_move != 3:
+                if currentNode.last_move != 3:
                     b.moveBlankLeft()
                     b2 = Board(b.boardList[0][0], b.boardList[0][1], b.boardList[0][2], b.boardList[1][0], b.boardList[1][1], b.boardList[1][2], b.boardList[2][0], b.boardList[2][1], b.boardList[2][2])
                     b.moveBlankRight()
