@@ -58,13 +58,14 @@ class TreeMisplaced:
         print("done with queue")
 
     def add(self, node: MisplacedNode):
-        curr = node.board.row1 + node.board.row2 + node.board.row3
-        for i in range(len(self.visited)):
-            if curr == (self.visited[i].board.row1 + self.visited[i].board.row2 + self.visited[i].board.row3):
-                if node.last_move == self.visited[i].last_move:
-                    return
-        if self.root == 0:
+        if len(self.visited) == 0:
             self.root = node
+        else:
+            curr = node.board.row1 + node.board.row2 + node.board.row3
+            for i in range(len(self.visited)):
+                if curr == (self.visited[i].board.row1 + self.visited[i].board.row2 + self.visited[i].board.row3):
+                    if node.last_move == self.visited[i].last_move:
+                        return
         self.frontier.put(node)
         if self.frontier.qsize() > self.maxFrontierSize:
             self.maxFrontierSize = self.frontier.qsize()
