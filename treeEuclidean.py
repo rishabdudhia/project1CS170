@@ -113,7 +113,7 @@ class TreeEuclidean:
         self.root = 0
         self.totalNumNodes = 0
         self.maxFrontierSize = 0
-        # self.visited = []
+        self.visited = []
     
     def printFrontier(self):
         print("Currently in queue")
@@ -125,19 +125,19 @@ class TreeEuclidean:
         print("done with queue")
 
     def add(self, node: EuclideanNode):
-        # if len(self.visited) == 0:
-        #     self.root = node
-        # else:
-        #     curr = node.board.row1 + node.board.row2 + node.board.row3
-        #     for i in range(len(self.visited)):
-        #         if curr == (self.visited[i].board.row1 + self.visited[i].board.row2 + self.visited[i].board.row3):
-        #             if node.last_move == self.visited[i].last_move:
-        #                 return
+        if len(self.visited) == 0:
+            self.root = node
+        else:
+            curr = node.board.row1 + node.board.row2 + node.board.row3
+            for i in range(len(self.visited)):
+                if curr == (self.visited[i].board.row1 + self.visited[i].board.row2 + self.visited[i].board.row3):
+                    if node.last_move == self.visited[i].last_move:
+                        return
         self.frontier.put(node)
         if self.frontier.qsize() > self.maxFrontierSize:
             self.maxFrontierSize = self.frontier.qsize()
         self.totalNumNodes += 1
-        # self.visited.append(node)
+        self.visited.append(node)
     
     def checkGoal(self, node: EuclideanNode):
         row1 = "1 | 2 | 3\n"
